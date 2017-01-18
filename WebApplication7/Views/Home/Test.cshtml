@@ -1,0 +1,33 @@
+﻿@model WebApplication7.Controllers.Test
+@{
+    ViewBag.Title = "Test";
+
+}
+<h3>@ViewBag.Message</h3>
+
+<h2>Test</h2>
+
+<form method="post" >
+    <input type="text" placeholder="Введите текст" name="text1"/><br />
+    <input type="file" name="filee" placeholder="Выбирете файл"/> 
+    <select name="product" multiple>
+        <option value="keyboard">Клавиатура</option>
+        <option value="Monitor"> Монитор</option>
+    </select>
+    <br /><br />
+    <p>Какой язык лучше?</p>
+    <input type="radio" name="yazik" value="Java"/>Java<br />
+    <input type="radio" name="yazik" value="C#"/>C#<br />
+    <input type="radio" name="yazik" value="C++" />C++<br />
+    <br />
+    <input type="checkbox" name="serial" value="Flash"/>Флэш<br />
+    <input type="checkbox" name="serial" value="Gotham" />Готэм<br />
+    <br />
+    <p> Введите ваше ФИО</p>
+    <textarea placeholder="Введите ваше ФИО" name="FIO"></textarea>
+    <input type="submit" name="save" value="save" />
+
+    <h2>Дейстивтельно крутой сериал: @Model.serial</h2>
+
+</form>
+
